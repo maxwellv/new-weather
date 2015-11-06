@@ -1,3 +1,5 @@
+/* jshint camelcase:false */
+
 'use strict';
 
 var request = require('request');
@@ -8,9 +10,10 @@ exports.getWeather = function(req, res){
   if (key === undefined){
     throw new Error('WUNDERGROUND key undefined! Did you remember to define it at runtime or export it in your .bash_profile?');
   }
-  var url = 'http://api.wunderground.com/api/' + key + '/conditions/q/' + zip + '.json?callback=?';
+  var url = 'http://api.wunderground.com/api/' + key + '/conditions/q/' + zip + '.json';
   request.post(url, function(err, response, body){
-    res.send(body);
+    console.log('type of response: ' + typeof(response));
+    res.send(response);
   });
 };
 
