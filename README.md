@@ -1,21 +1,4 @@
-NSS Cohort 4 Integrated Node.js Template
+New weather
 ========================================
 
-- Node.js
-- Express
-- MongoDB
-- Redis
-- Moment
-- Bcrypt
-- Lo-Dash
-- Less
-- Jade
-- Request
-- Grunt
-- Mocha
-- Chai
-- SuperTest
-- Blanket
-- TravisCI
-- Coveralls
-
+A simple application for getting weather data from the Weather Underground API and displaying it to the user.
