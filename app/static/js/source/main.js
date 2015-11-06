@@ -1,3 +1,4 @@
+/* jshint camelcase:false */
 (function(){
 
   'use strict';
@@ -14,10 +15,15 @@
     url +='/getWeather';
     var zip = $('#ZIP').val();
     //TODO: regex to see if this is an actual zip code
-    console.log('ZIP code is ' + zip);
     $.ajax({url:url, type:'POST', data:{zipCode:zip}, success:function(data){
-      console.log(data);
+      handleData(data.body);
     }});
+  }
+
+  function handleData(data){
+    data = JSON.parse(data);
+    var forecastLine = 'Current conditions in ' + data.current_observation.display_location.full + ': ' + data.current_observation.weather + ', with a temperature of ' + data.current_observation.temperature_string;
+    $('#forecasts').text(forecastLine);
   }
 
   function makeURL(){
