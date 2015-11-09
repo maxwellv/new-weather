@@ -1,6 +1,5 @@
 'use strict';
 
-var d = require('../lib/request-debug');
 var initialized = false;
 
 module.exports = function(req, res, next){
@@ -16,8 +15,8 @@ function load(app, fn){
   var home = require('../routes/home');
   var weather = require('../routes/weather');
 
-  app.get('/', d, home.index);
-  app.post('/getWeather', d, weather.getWeather);
+  app.get('/', home.index);
+  app.post('/getWeather', weather.getWeather);
   console.log('Routes Loaded');
   fn();
 }
