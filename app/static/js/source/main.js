@@ -27,7 +27,12 @@
 
   function handleData(data){
     data = JSON.parse(data);
-    var forecastLine = 'Current conditions in ' + data.current_observation.display_location.full + ': ' + data.current_observation.weather + ', with a temperature of ' + data.current_observation.temperature_string;
+    var forecastLine = '';
+    if (data.response.error){
+      forecastLine = 'Error: ' + data.response.error.description + '.';
+    } else {
+      forecastLine = 'Current conditions in ' + data.current_observation.display_location.full + ': ' + data.current_observation.weather + ', with a temperature of ' + data.current_observation.temperature_string;
+    }
     $('#forecasts').text(forecastLine);
   }
 
