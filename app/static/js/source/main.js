@@ -14,10 +14,15 @@
     var url = makeURL();
     url +='/getWeather';
     var zip = $('#ZIP').val();
-    //TODO: regex to see if this is an actual zip code
-    $.ajax({url:url, type:'POST', data:{zipCode:zip}, success:function(data){
-      handleData(data.body);
-    }});
+    zip = zip.match(/[0-9]{5}/);
+    if (zip === null){
+      $('#ZIP').val('');
+      alert('Please enter a valid ZIP code.');
+    } else {
+      $.ajax({url:url, type:'POST', data:{zipCode:zip}, success:function(data){
+        handleData(data.body);
+      }});
+    }
   }
 
   function handleData(data){
