@@ -2,4 +2,21 @@ extends ../shared/template
 
 block content
   h1= title
-
+  h4 This is a simple implementation of 
+    a(href='http://www.wunderground.com/?apiref=cd4ae5d261fe1653') Weather Underground's 
+    | API. Enter your ZIP code on the home page and it will tell you your current conditions and temperature. The site itself is running on a Node.js server deployed to AWS, and on the front-end uses jQuery and the ZURB Foundation framework.
+  br
+  h1 About Me
+  h4 I am Maxwell Vance, a Nashville Software School graduate. You may find me on LinkedIn 
+    a(href='https://www.linkedin.com/in/maxwellv') here 
+    | or on GitHub 
+    a(href='https://github.com/maxwellv') here 
+    | (where you may also view or even fork this site's code). Check out 
+    a(href='http://www.javaflipt.com/') JavaFlipt 
+    | if you want to see another site I made, or just want a fun time-wasting game to play.
+  br
+  h1 Acknowledgements
+  h4 Weather data provided by 
+    a(href='http://www.wunderground.com/?apiref=cd4ae5d261fe1653') Weather Underground.
+    img(src='/img/wundergroundLogo_4c.png')
+  br
