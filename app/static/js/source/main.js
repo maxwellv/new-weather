@@ -41,5 +41,9 @@
     return url;
   }
 
+  $('.toggle-topbar').click(function(){
+    $('.top-bar').toggleClass('expanded');
+  });
+
 })();
 
