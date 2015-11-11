@@ -7,7 +7,6 @@ var express    = require('express');
 var less       = require('express-less');
 var session    = require('express-session');
 var RedisStore = require('connect-redis')(session);
-var initMongo  = require('./lib/init-mongo');
 var initRoutes = require('./lib/init-routes');
 
 var app = express();
@@ -15,7 +14,6 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'jade');
 
 /* --- pipeline begins */
-app.use(initMongo.connect);
 app.use(initRoutes);
 app.use(express.logger(':remote-addr -> :method :url [:status]'));
 app.use(express.favicon());
