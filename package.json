@@ -17,11 +17,9 @@
     "express":         "3.5.1",
     "lodash":          "*",
     "moment":          "*",
-    "mongodb":         "*",
-    "bcrypt":          "*",
     "connect-redis":   "*",
     "jade":            "*",
-    "express-less":    "0.0.2",
+    "express-less":    "0.0.8",
     "request":         "*",
     "express-session": "1.0.2"
   },
