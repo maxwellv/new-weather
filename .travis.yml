@@ -1,9 +1,10 @@
 language: node_js
 node_js:
-  - "0.10"
+- '0.10'
 services:
-  - mongodb
-  - redis-server
+- redis-server
 after_script:
-  - npm run coveralls
-
+- npm run coveralls
+env:
+  global:
+   secure: g1uf/SAqTz4HyA5GhAuAqsbcrIxp7JecVSPhynivJ9XuAAuxHJkqC7kIzSLLlwKqirfC1fmjNMi6+6dELkMlxjp3Y/ji4VbM0XlHIa6xYwzeE483ZThPPeN/6mUrRSzwxlXqPLPPuaumN0HMrop0gra6FMt4By8cv7NhAWfMoHMj5XLvVFmUQOjYEhUGUgmXtKCNS1WEYNl4NsrVaXt6jdv+KPGvcsRMh4A938bnBIL45mBA3t3Fq0tyRFl1buJQ4m8u4cZeW6/ilrG5DV6OfEv76O3GsDTxVbgu9BR6aDEvWQGeRWvcv+nJlncyoYiBXw6ZiGjIToDhYpqTQ0KyJL+7MUQFIpqbm5o7MKO10l1+3wrDhECzleQZ6XnkV/JCbMrmBNzqXULMENLEP/Zj9QTUuIAuA9AdaztsXGToz6vyQgJLakyJQLa7gfDz69Vb7MoFVyqa+aSckjzcORxs1jIPgcRWWK3AdQ65ITEBEQpCcAgoncVhkUw+NsQNuMBLmrfcqYT7g6WRo2ZfeiPl9WtZOpm72k2+pzb0Fp3A1WgNvxw8fDZYqlkGsGWNTKMcHP3KZDyywmPdp+JyPNiirWOdJ3QAYXJ8MTLwpBUFQw1tZOvUNBv+NvPW5A003MLoe4uJxUNloaPX2v7tJ6aCFSE09hu5SjcsL8BHx8ulE14=
