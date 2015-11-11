@@ -1,4 +1,4 @@
-/* jshint expr:true */
+/* jshint expr:true, camelcase:false */
 
 'use strict';
 
@@ -15,6 +15,17 @@ describe('home', function(){
         expect(res.text).to.contain('Want to find out what your weather\'s like?');
         done();
       });
+    });
+  });
+});
+
+describe('post /getWeather', function(){
+  it('should get weather info', function(done){
+    request(app).post('/getWeather').field('zipCode', '37115').end(function(err, res){
+      var weather = JSON.parse(res.body.body);
+      expect(res.status).to.equal(200);
+      expect(weather.current_observation.display_location.full).to.equal('Madison, TN');
+      done();
     });
   });
 });
