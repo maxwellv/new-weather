@@ -12,7 +12,6 @@ exports.getWeather = function(req, res){
   }
   var url = 'http://api.wunderground.com/api/' + key + '/conditions/q/' + zip + '.json';
   request.post(url, function(err, response, body){
-    console.log('type of response: ' + typeof(response));
     res.send(response);
   });
 };
